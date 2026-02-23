@@ -1,0 +1,331 @@
+/* =================================================================
+   LP CAR SHIELD - CONVERSION CSS PREMIUM & PERFORMANCE
+   ================================================================= */
+
+:root {
+    --gold: #d4af37; 
+    --dark: #020202; 
+}
+
+body {
+    background-color: var(--dark); 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .font-oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.text-outline-gold { 
+    -webkit-text-stroke: 1.5px var(--gold); 
+    color: transparent; 
+    font-weight: 900;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.9)); 
+}
+
+.text-shadow-lg { text-shadow: 0 10px 30px rgba(0,0,0,0.8); }
+.text-shadow-glow { text-shadow: 0 0 20px rgba(212,175,55,0.3); }
+
+/* PERFORMANCE MAXIMA: Evitar repaints */
+.hw-accel {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+.noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+}
+.vignette-radial { 
+    background: radial-gradient(circle, transparent 40%, #000 130%); 
+}
+
+.hero-parallax {
+    transform: translateY(calc(var(--scroll-y, 0) * 0.4px));
+    will-change: transform;
+}
+
+.animate-pulse-cta {
+    animation: pulse-cta-anim 2.5s infinite;
+}
+@keyframes pulse-cta-anim {
+    0% { transform: scale(1) skewX(-10deg); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5); }
+    50% { transform: scale(1.03) skewX(-10deg); box-shadow: 0 0 25px 0 rgba(212, 175, 55, 0.1); }
+    100% { transform: scale(1) skewX(-10deg); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+.benefit-card {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.benefit-card:hover {
+    border-color: rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); 
+}
+.benefit-card svg { filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5)); }
+
+/* =================================================================
+   POP-UP DE CONVERSÃO - ESTILOS AJUSTADOS PARA NOTEBOOK
+   ================================================================= */
+.carbon-popup-badge {
+    background: linear-gradient(180deg, #2b628f 0%, #0f172a 100%); 
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 10px 30px rgba(0, 0, 0, 0.8);
+    width: 90%;
+    padding: 0.75rem;
+}
+
+.badge-number {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+/* Ajustes para telas de notebook (entre 1024px e 1440px) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .popup-content {
+        max-width: 480px !important;
+    }
+    .carbon-popup-badge {
+        width: 95%;
+        padding: 0.6rem !important;
+    }
+    .badge-number {
+        font-size: 2rem !important;
+    }
+    .popup-content .relative.pb-\[100\%\] {
+        padding-bottom: 75% !important; /* Proporção 4:3 */
+    }
+    .popup-content h2 {
+        font-size: 1.4rem !important;
+        top: 0.75rem !important;
+    }
+    .popup-content .text-2xl {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Ajustes para mobile (já existentes, mas refinados) */
+@media (max-width: 768px) {
+    .hero-parallax {
+        transform: none !important;
+        will-change: auto !important;
+    }
+
+    .font-oswald {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    #typewriter-text {
+        font-size: clamp(1.8rem, 8vw, 3rem) !important;
+        line-height: 1.15 !important;
+    }
+
+    h2.text-3xl, h2.text-5xl {
+        font-size: clamp(1.75rem, 7vw, 2.5rem) !important;
+    }
+
+    section {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
+    #contact {
+        padding-top: 4rem !important;
+    }
+
+    .timeline-step { padding-left: 0.25rem; }
+    .timeline-step .md\:hidden.pl-20,
+    .timeline-step .w-full.pl-20 {
+        padding-left: 4rem !important; 
+    }
+    .timeline-step .w-12 { width: 2.5rem !important; height: 2.5rem !important; }
+    .timeline-step .left-4 { left: 1rem !important; }
+
+    .popup-content {
+        max-height: 85vh; 
+        overflow-y: auto !important; 
+        max-width: 95% !important;
+    }
+    .carbon-popup-badge { 
+        padding: 0.5rem !important; 
+        width: 95% !important; 
+    }
+    .badge-number { 
+        font-size: clamp(1.5rem, 8vw, 2.2rem) !important; 
+    }
+    
+    /* Ajustes no formulário para mobile */
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+    .form-input {
+        padding: 0.8rem 0.5rem 0.8rem 2.2rem;
+        font-size: 0.9rem;
+    }
+    .form-group .icon {
+        left: 0.3rem;
+        font-size: 1rem;
+    }
+    .form-group label {
+        font-size: 0.65rem;
+    }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+.typewriter-cursor {
+    display: inline-block;
+    width: 6px;
+    height: 1.1em;
+    background-color: var(--gold);
+    margin-left: 6px;
+    animation: blink 0.8s infinite;
+    vertical-align: text-bottom;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+.invisible { visibility: hidden; }
+
+video {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =================================================================
+   FORMULÁRIO APRIMORADO – ESTILO PREMIUM
+   ================================================================= */
+
+.form-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.form-group .icon {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(212, 175, 55, 0.4);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+    font-style: normal;
+}
+
+.form-group:focus-within .icon {
+    color: var(--gold);
+}
+
+.form-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    padding: 0.9rem 0.5rem 0.9rem 2.5rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    z-index: 1;
+    border-radius: 0;
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 300;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+    transition: opacity 0.2s ease;
+}
+
+.form-input:focus::placeholder {
+    opacity: 0.5;
+}
+
+.form-input:focus {
+    outline: none;
+    border-bottom-color: transparent;
+    background: rgba(212, 175, 55, 0.03);
+    box-shadow: 0 4px 10px -4px rgba(212, 175, 55, 0.3);
+}
+
+.form-input:focus::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    animation: input-glow 1.5s infinite;
+    pointer-events: none;
+}
+
+@keyframes input-glow {
+    0% { opacity: 0.5; transform: scaleX(0.8); }
+    50% { opacity: 1; transform: scaleX(1); }
+    100% { opacity: 0.5; transform: scaleX(0.8); }
+}
+
+.required-asterisk {
+    color: var(--gold);
+    margin-left: 2px;
+    font-size: 1.2rem;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 0.35rem;
+    transition: color 0.3s ease;
+}
+
+.form-group:focus-within label {
+    color: var(--gold);
+}
+
+button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+}
+
+button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: 0;
+}
+
+button[type="submit"]:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+button[type="submit"] span {
+    position: relative;
+    z-index: 2;
+}

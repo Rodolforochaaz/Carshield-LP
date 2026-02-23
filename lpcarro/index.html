@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>CAR SHIELD | Blindagens Premium</title>
+    
+    <link rel="icon" href="img/logo.png" type="image/png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Oswald:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/lp-conversao.css">
+</head>
+<body class="bg-[#020202] text-white overflow-x-hidden selection:bg-gold selection:text-black antialiased font-montserrat w-full">
+
+    <div class="fixed inset-0 z-[1] pointer-events-none noise-overlay opacity-[0.05]"></div>
+    <div class="fixed inset-0 z-[2] pointer-events-none vignette-radial"></div>
+
+    <header class="fixed top-0 w-full z-[100] transition-all duration-500 py-4 lg:py-5 bg-[#020202]/95 backdrop-blur-md border-b border-white/5 shadow-2xl">
+        <div class="container mx-auto flex justify-between items-center px-6 lg:px-12">
+            <div class="logo relative group cursor-pointer skew-x-[-10deg] z-[101]">
+                <a href="#" class="block">
+                    <img src="img/logo.png" alt="Car Shield Blindagens" class="h-6 md:h-10 w-auto object-contain skew-x-[10deg] drop-shadow-md">
+                </a>
+            </div>
+            <div class="flex items-center gap-4 z-[101]">
+                <a href="https://api.whatsapp.com/send?phone=551126921471&text=Ol%C3%A1%2C%20achei%20sua%20empresa%20no%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" class="px-6 py-2 bg-transparent border border-white text-white font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 skew-x-[-10deg] flex items-center justify-center">
+                    <span class="inline-block skew-x-[10deg]">WhatsApp VIP</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="smooth-wrapper" class="relative z-10 w-full overflow-hidden">
+        
+        <section class="relative h-[100dvh] w-full overflow-hidden flex items-center justify-center pt-16">
+            <div class="absolute inset-0 z-0 hero-parallax bg-[#020202]">
+                <video id="hero-video" class="smart-video w-full h-full object-cover opacity-60 hw-accel bg-[#020202]" 
+       muted playsinline loop autoplay disablePictureInPicture
+       src="img/home-desktop.mp4"
+       poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+       data-src-desktop="img/home-desktop.mp4" 
+       data-src-mobile="img/home-mobile.mp4">
+</video>
+                <div class="absolute inset-0 bg-gradient-to-b from-[#020202]/90 via-[#020202]/30 to-[#020202]"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10 text-center max-w-5xl flex flex-col items-center justify-center h-full">
+                <div class="inline-flex items-center gap-4 mb-4 lg:mb-6 hero-reveal-elem">
+                    <div class="h-[1px] w-8 lg:w-12 bg-gold/50"></div>
+                    <span class="text-gold tracking-[0.3em] lg:tracking-[0.4em] text-[9px] md:text-xs font-bold uppercase drop-shadow-md">A Referência em Proteção Automotiva</span>
+                    <div class="h-[1px] w-8 lg:w-12 bg-gold/50"></div>
+                </div>
+                
+                <h1 class="text-3xl md:text-5xl lg:text-[4rem] font-black uppercase leading-[1.1] mb-6 text-white font-oswald text-shadow-lg min-h-[140px] md:min-h-[160px] lg:min-h-[150px]">
+                    <span id="typewriter-text">PROTEJA SUA FAMÍLIA COM A BLINDAGEM MAIS <span class="text-gold">LEVE</span> E TECNOLÓGICA DO BRASIL.</span><span class="typewriter-cursor"></span>
+                </h1>
+                
+                <p class="text-gray-300 text-sm md:text-lg mb-10 max-w-3xl mx-auto hero-reveal-elem font-medium leading-relaxed">
+                    Engenharia de precisão aplicada à sua segurança. Certificação rigorosa do Exército e tecnologia AGP B33 para garantir proteção Nível III-A sem sacrificar a performance do seu veículo.
+                </p>
+                
+                <div class="hero-reveal-elem flex flex-col items-center w-full sm:w-auto">
+                    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="py-5 px-12 bg-white text-black font-black font-oswald tracking-[0.2em] text-sm lg:text-base uppercase transition-colors duration-300 italic skew-x-[-10deg] shadow-[0_0_30px_rgba(212,175,55,0.2)] animate-pulse-cta hover:bg-gold group w-full mb-4 border border-transparent hover:border-white">
+                        <span class="inline-block transform skew-x-[10deg] group-hover:scale-105 transition-transform">Garantir Minha Segurança</span>
+                    </button>
+                    <div class="flex items-center gap-2 text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold">
+                        <span class="text-gold text-sm tracking-normal">★★★★★</span> Mais de 5.000 famílias protegidas
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#050505] py-12 border-y border-white/5 relative z-20">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
+                    <div class="counter-box flex flex-col justify-center">
+                        <h2 class="text-4xl lg:text-6xl font-black font-oswald text-gold mb-1"><span class="counter-val text-shadow-glow" data-target="15">15</span>+</h2>
+                        <p class="text-[9px] lg:text-[11px] font-bold uppercase tracking-widest text-gray-500">Anos de Mercado</p>
+                    </div>
+                    <div class="counter-box flex flex-col justify-center">
+                        <h2 class="text-4xl lg:text-6xl font-black font-oswald text-gold mb-1"><span class="counter-val text-shadow-glow" data-target="5000">5.000</span>+</h2>
+                        <p class="text-[9px] lg:text-[11px] font-bold uppercase tracking-widest text-gray-500">Clientes Atendidos</p>
+                    </div>
+                    <div class="counter-box flex flex-col justify-center">
+                        <h2 class="text-4xl lg:text-6xl font-black font-oswald text-gold mb-1"><span class="counter-val text-shadow-glow" data-target="7000">7.000</span>+</h2>
+                        <p class="text-[9px] lg:text-[11px] font-bold uppercase tracking-widest text-gray-500">Veículos Blindados</p>
+                    </div>
+                    <div class="counter-box flex flex-col justify-center">
+                        <h2 class="text-4xl lg:text-6xl font-black font-oswald text-gold mb-1"><span class="counter-val text-shadow-glow" data-target="10">10</span></h2>
+                        <p class="text-[9px] lg:text-[11px] font-bold uppercase tracking-widest text-gray-500">Anos de Garantia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-[#020202] relative z-10 w-full">
+            <div class="container mx-auto px-6 lg:px-12 max-w-7xl">
+                <div class="text-center mb-16 scroll-reveal-elem">
+                    <span class="text-gold text-[10px] font-black tracking-[0.4em] uppercase block mb-4 italic">Padrão de Qualidade</span>
+                    <h2 class="text-3xl md:text-5xl font-black italic uppercase leading-none text-white font-oswald">Tecnologia & <span class="text-outline-gold">Performance</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="benefit-card p-8 group transition-all duration-500 hover:-translate-y-2 relative overflow-hidden hw-accel">
+                        <div class="w-14 h-14 rounded-full bg-[#0a0a0a] border border-gold/20 flex items-center justify-center mb-6 text-gold group-hover:scale-110 group-hover:bg-gold/10 transition-all relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-black italic uppercase text-white font-oswald mb-3 relative z-10">Proteção Nível III-A</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-medium relative z-10">O nível máximo permitido para uso civil. Resistência absoluta contra todos os calibres de armas de mão comerciais.</p>
+                    </div>
+
+                    <div class="benefit-card p-8 group transition-all duration-500 hover:-translate-y-2 relative overflow-hidden hw-accel">
+                        <div class="w-14 h-14 rounded-full bg-[#0a0a0a] border border-gold/20 flex items-center justify-center mb-6 text-gold group-hover:scale-110 group-hover:bg-gold/10 transition-all relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-black italic uppercase text-white font-oswald mb-3 relative z-10">Vidros AGP B33</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-medium relative z-10">Os vidros automotivos mais avançados do mercado. Transparência cristalina, 20% mais leves e garantia contra delaminação.</p>
+                    </div>
+
+                    <div class="benefit-card p-8 group transition-all duration-500 hover:-translate-y-2 relative overflow-hidden hw-accel">
+                        <div class="w-14 h-14 rounded-full bg-[#0a0a0a] border border-gold/20 flex items-center justify-center mb-6 text-gold group-hover:scale-110 group-hover:bg-gold/10 transition-all relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <h3 class="text-xl font-black italic uppercase text-white font-oswald mb-3 relative z-10">Acabamento Invisível</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-medium relative z-10">Desmontagem e remontagem cirúrgica. Preservamos 100% da originalidade interna, garantindo ausência total de ruídos.</p>
+                    </div>
+
+                    <div class="benefit-card p-8 group transition-all duration-500 hover:-translate-y-2 relative overflow-hidden hw-accel">
+                        <div class="w-14 h-14 rounded-full bg-[#0a0a0a] border border-gold/20 flex items-center justify-center mb-6 text-gold group-hover:scale-110 group-hover:bg-gold/10 transition-all relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-black italic uppercase text-white font-oswald mb-3 relative z-10">Recalibração ADAS</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-medium relative z-10">Tecnologia embarcada respeitada. Sensores de faixa, frenagem autônoma e câmeras calibradas com software de fábrica.</p>
+                    </div>
+
+                    <div class="benefit-card p-8 group transition-all duration-500 hover:-translate-y-2 relative overflow-hidden hw-accel">
+                        <div class="w-14 h-14 rounded-full bg-[#0a0a0a] border border-gold/20 flex items-center justify-center mb-6 text-gold group-hover:scale-110 group-hover:bg-gold/10 transition-all relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-black italic uppercase text-white font-oswald mb-3 relative z-10">Prazo Rigoroso</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-medium relative z-10">Sua rotina não pode parar. Entregamos a blindagem finalizada e documentada no prazo recorde do mercado premium.</p>
+                    </div>
+
+                    <div class="benefit-card p-8 group transition-all duration-500 hover:-translate-y-2 relative overflow-hidden hw-accel">
+                        <div class="w-14 h-14 rounded-full bg-[#0a0a0a] border border-gold/20 flex items-center justify-center mb-6 text-gold group-hover:scale-110 group-hover:bg-gold/10 transition-all relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        </div>
+                        <h3 class="text-xl font-black italic uppercase text-white font-oswald mb-3 relative z-10">Valorização do Bem</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-medium relative z-10">Um veículo com selo Car Shield e certificação em dia possui liquidez e valor de revenda muito superiores no mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-[#050505] relative z-10 border-y border-white/5 overflow-hidden w-full">
+            <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-black/20 to-transparent pointer-events-none"></div>
+            <div class="container mx-auto px-6 lg:px-12 max-w-7xl">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    <div class="lg:w-1/2 scroll-reveal-elem w-full">
+                        <div class="relative group aspect-[4/3] w-full overflow-hidden border border-white/10 rounded-sm hw-accel">
+                            <div class="absolute inset-0 bg-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-20"></div>
+                             <video class="smart-video w-full h-full object-cover opacity-60 hw-accel" 
+                                    muted playsinline loop autoplay disablePictureInPicture 
+                                    data-src-desktop="img/investimento-desktop.mp4" 
+                                    data-src-mobile="img/investimento-mobile.mp4">
+                             </video>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 scroll-reveal-elem w-full text-center lg:text-left">
+                        <span class="text-gold text-[10px] font-black tracking-[0.4em] uppercase block mb-4 italic">Decisão Inadiável</span>
+                        <h2 class="text-3xl md:text-5xl font-black italic uppercase leading-tight text-white font-oswald mb-8">
+                            O investimento definitivo <br>na <span class="text-outline-gold">Sua Paz de Espírito.</span>
+                        </h2>
+                        <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed font-medium">
+                            <p>O crescimento exponencial da violência urbana transformou o trajeto diário em um cenário de incertezas. Em semáforos ou engarrafamentos, o elemento surpresa deixou de ser uma exclusividade.</p>
+                            <p>A blindagem automotiva não é mais vista como um acessório de luxo, mas sim como o <strong>único escudo ativo</strong> capaz de garantir a integridade física da sua família em momentos críticos.</p>
+                            <p>Na Car Shield, não trabalhamos apenas com materiais balísticos. Entregamos a certeza de que o interior do seu veículo permanecerá um porto seguro inabalável.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-[#020202] relative z-10 overflow-hidden w-full">
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <video class="smart-video w-full h-full object-cover opacity-60 hw-accel" 
+                       muted playsinline loop autoplay disablePictureInPicture 
+                       data-src-desktop="img/processo-desktop.mp4" 
+                       data-src-mobile="img/processo-mobile.mp4">
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-b from-[#020202] via-[#020202]/80 to-[#020202]"></div>
+            </div>
+
+            <div class="container mx-auto px-6 lg:px-12 max-w-5xl relative z-10">
+                <div class="text-center mb-16 md:mb-20 scroll-reveal-elem">
+                    <span class="text-gold text-[10px] font-black tracking-[0.4em] uppercase block mb-4 italic drop-shadow-md">Transparência & Método</span>
+                    <h2 class="text-3xl md:text-5xl font-black italic uppercase leading-none text-white font-oswald drop-shadow-lg">Processo de <span class="text-outline-gold">Blindagem</span></h2>
+                </div>
+
+                <div class="relative timeline-container">
+                    <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-[2px] bg-white/10 transform md:-translate-x-1/2">
+                        <div class="timeline-progress w-full h-full bg-gold origin-top shadow-[0_0_10px_#d4af37]"></div>
+                    </div>
+
+                    <div class="timeline-step flex flex-col md:flex-row items-start md:items-center justify-between mb-12 md:mb-16 relative w-full hw-accel">
+                        <div class="hidden md:block w-5/12 text-right pr-12">
+                            <h3 class="text-xl md:text-2xl font-black italic uppercase text-white font-oswald drop-shadow-md">1. Avaliação Técnica</h3>
+                            <p class="text-gray-300 text-sm mt-3 font-medium leading-relaxed drop-shadow-md">Mapeamento minucioso do veículo, seleção dos materiais balísticos e planejamento estrutural detalhado da engenharia.</p>
+                        </div>
+                        <div class="absolute left-6 md:left-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#0a0a0a] border-2 border-gold transform -translate-x-1/2 flex items-center justify-center z-10 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                            <span class="text-gold font-bold text-xs md:text-sm">01</span>
+                        </div>
+                        <div class="md:hidden w-full pl-16 sm:pl-20 text-left">
+                            <h3 class="text-lg sm:text-xl font-black italic uppercase text-white font-oswald drop-shadow-md">Avaliação Técnica</h3>
+                            <p class="text-gray-300 text-xs sm:text-sm mt-2 font-medium drop-shadow-md">Mapeamento e planejamento estrutural.</p>
+                        </div>
+                        <div class="hidden md:block w-5/12"></div>
+                    </div>
+
+                    <div class="timeline-step flex flex-col md:flex-row items-start md:items-center justify-between mb-12 md:mb-16 relative w-full hw-accel">
+                        <div class="hidden md:block w-5/12"></div>
+                        <div class="absolute left-6 md:left-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#0a0a0a] border-2 border-gold transform -translate-x-1/2 flex items-center justify-center z-10 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                            <span class="text-gold font-bold text-xs md:text-sm">02</span>
+                        </div>
+                        <div class="w-full md:w-5/12 pl-16 sm:pl-20 md:pl-12 text-left">
+                            <h3 class="text-lg sm:text-xl md:text-2xl font-black italic uppercase text-white font-oswald drop-shadow-md">2. Tramite Documental</h3>
+                            <p class="text-gray-300 text-xs sm:text-sm mt-2 md:mt-3 font-medium leading-relaxed drop-shadow-md">Início imediato das aprovações legais junto ao Exército Brasileiro e Detran, garantindo regularização total.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step flex flex-col md:flex-row items-start md:items-center justify-between mb-12 md:mb-16 relative w-full hw-accel">
+                        <div class="hidden md:block w-5/12 text-right pr-12">
+                            <h3 class="text-xl md:text-2xl font-black italic uppercase text-white font-oswald drop-shadow-md">3. Engenharia Balística</h3>
+                            <p class="text-gray-300 text-sm mt-3 font-medium leading-relaxed drop-shadow-md">Desmontagem cirúrgica, aplicação da manta de Aramida, aço 304L no overlap e instalação dos vidros AGP B33.</p>
+                        </div>
+                        <div class="absolute left-6 md:left-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#0a0a0a] border-2 border-gold transform -translate-x-1/2 flex items-center justify-center z-10 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                            <span class="text-gold font-bold text-xs md:text-sm">03</span>
+                        </div>
+                        <div class="md:hidden w-full pl-16 sm:pl-20 text-left">
+                            <h3 class="text-lg sm:text-xl font-black italic uppercase text-white font-oswald drop-shadow-md">Engenharia Balística</h3>
+                            <p class="text-gray-300 text-xs sm:text-sm mt-2 font-medium drop-shadow-md">Aplicação de Aramida, Aço e Vidros.</p>
+                        </div>
+                        <div class="hidden md:block w-5/12"></div>
+                    </div>
+
+                    <div class="timeline-step flex flex-col md:flex-row items-start md:items-center justify-between relative w-full hw-accel">
+                        <div class="hidden md:block w-5/12"></div>
+                        <div class="absolute left-6 md:left-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#0a0a0a] border-2 border-gold transform -translate-x-1/2 flex items-center justify-center z-10 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                            <span class="text-gold font-bold text-xs md:text-sm">04</span>
+                        </div>
+                        <div class="w-full md:w-5/12 pl-16 sm:pl-20 md:pl-12 text-left">
+                            <h3 class="text-lg sm:text-xl md:text-2xl font-black italic uppercase text-white font-oswald drop-shadow-md">4. Entrega Certificada</h3>
+                            <p class="text-gray-300 text-xs sm:text-sm mt-2 md:mt-3 font-medium leading-relaxed drop-shadow-md">Remontagem rigorosa, teste de pista, teste de infiltração e recalibração eletrônica antes da entrega oficial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="relative py-24 md:py-32 bg-[#050505] z-10 border-t border-white/5 overflow-hidden w-full">
+            <div class="absolute inset-0 z-0 pointer-events-none bg-[#020202]">
+                <video class="smart-video w-full h-full object-cover opacity-[0.25] hw-accel" 
+                       muted playsinline loop autoplay disablePictureInPicture 
+                       data-src-desktop="img/fundo-desktop.mp4" 
+                       data-src-mobile="img/fundo-mobile.mp4">
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#020202] via-[#020202]/70 to-[#020202]"></div>
+            </div>
+
+            <div class="container mx-auto px-4 sm:px-6 lg:px-12 max-w-4xl relative z-10 w-full">
+                <div class="bg-[#0a0a0a]/90 backdrop-blur-md border border-gold/30 p-6 md:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative overflow-hidden scroll-reveal-elem rounded-sm">
+                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-gold/10 blur-[80px] rounded-full pointer-events-none"></div>
+
+                    <div class="text-center mb-8 md:mb-10 relative z-10">
+                        <span class="text-gold text-[10px] font-black tracking-[0.4em] uppercase mb-2 block">Atendimento Prioritário</span>
+                        <h2 class="text-3xl md:text-5xl font-black italic uppercase text-white font-oswald">Solicite sua <span class="text-outline-gold">Proposta</span></h2>
+                        <p class="text-gray-400 text-xs md:text-base mt-4 font-medium">Preencha os dados abaixo e nosso Diretor Comercial entrará em contato em até 10 minutos.</p>
+                    </div>
+
+                    <form id="lp-conversion-form" class="space-y-6 md:space-y-8 relative z-10 mt-8 w-full">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
+                            <div class="group relative w-full">
+                                <label class="text-[10px] text-gray-400 uppercase tracking-widest font-bold mb-2 block group-focus-within:text-gold transition-colors">Nome Completo</label>
+                                <input type="text" name="nome" required class="form-input w-full">
+                            </div>
+                            <div class="group relative w-full">
+                                <label class="text-[10px] text-gray-400 uppercase tracking-widest font-bold mb-2 block group-focus-within:text-gold transition-colors">WhatsApp</label>
+                                <input type="tel" name="whatsapp" required placeholder="(DD) 99999-9999" class="form-input w-full">
+                            </div>
+                        </div>
+                        <div class="group relative w-full">
+                            <label class="text-[10px] text-gray-400 uppercase tracking-widest font-bold mb-2 block group-focus-within:text-gold transition-colors">Veículo a ser blindado (Marca / Modelo / Ano)</label>
+                            <input type="text" name="veiculo" required placeholder="Ex: Porsche Cayenne 2024" class="form-input w-full">
+                        </div>
+                        <button type="submit" class="w-full py-4 md:py-5 bg-white text-black font-black font-oswald tracking-[0.2em] text-xs md:text-base uppercase hover:bg-gold hover:text-black transition-colors duration-300 italic skew-x-[-10deg] mt-8 md:mt-10 shadow-[0_0_20px_rgba(212,175,55,0.15)] group border border-transparent">
+                            <span class="inline-block transform skew-x-[10deg] group-hover:scale-105 transition-transform">Garantir Meu Orçamento</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-black py-12 border-t border-white/5 text-center relative z-20 w-full overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center gap-6">
+                <div class="w-16 h-[2px] bg-gold mb-2"></div>
+                <p class="text-[9px] text-gray-600 uppercase tracking-[0.4em] font-bold">© 2026 Car Shield Blindagens. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="carbon-popup" class="fixed inset-0 z-[300] hidden items-center justify-center font-montserrat w-full h-full p-2 sm:p-4">
+        <div class="absolute inset-0 bg-[#0a0a0a]/90 backdrop-blur-md popup-overlay cursor-pointer opacity-0"></div>
+        
+        <div class="relative w-full sm:w-[95%] max-w-[550px] bg-black shadow-[0_0_60px_rgba(0,0,0,0.9)] transform opacity-0 flex flex-col overflow-hidden popup-content border border-white/10 rounded-sm">
+            <button id="close-popup-btn" class="absolute top-2 right-2 sm:top-4 sm:right-4 text-white hover:text-gold transition-colors z-30 text-2xl sm:text-3xl font-light leading-none drop-shadow-md p-2">✕</button>
+            
+            <div class="relative w-full pb-[100%] md:pb-[100%] bg-[#020202]">
+                <video id="popup-video" class="absolute inset-0 w-full h-full object-cover object-center opacity-70 hw-accel"
+                       muted playsinline loop autoplay disablePictureInPicture 
+                       data-src-desktop="img/fundo-desktop.mp4" 
+                       data-src-mobile="img/fundo-mobile.mp4">
+                </video>
+                
+                <div class="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-[#0a0a0a]/95 to-transparent z-10"></div>
+                
+                <h2 class="absolute top-8 left-0 w-full text-center text-white text-xl sm:text-[1.5rem] md:text-[1.75rem] font-black tracking-tight px-4 sm:px-6 z-20 font-oswald uppercase italic drop-shadow-lg text-shadow-glow">
+                    Sua segurança não pode esperar.
+                </h2>
+                
+                <div class="absolute bottom-0 left-0 w-full pt-40 pb-4 sm:pb-6 bg-gradient-to-t from-black via-black/80 to-transparent z-10 flex flex-col items-center">
+                    <div class="carbon-popup-badge rounded-md p-2 sm:p-3 md:p-4 mb-2 sm:mb-4 flex items-center justify-center gap-2 sm:gap-3 border border-white/20 shadow-2xl relative z-20">
+                        <div class="text-right leading-tight border-r border-white/20 pr-2 sm:pr-3">
+                            <span class="block text-white text-[8px] sm:text-[10px] md:text-xs font-bold uppercase tracking-wider">Blindagem completa</span>
+                            <span class="block text-white text-[8px] sm:text-[10px] md:text-xs font-bold uppercase tracking-wider">em até:</span>
+                        </div>
+                        <div class="text-left pl-1">
+                            <span class="text-white badge-number font-black tracking-tighter drop-shadow-md">20 dias úteis<sup class="text-sm sm:text-base font-normal">*</sup></span>
+                        </div>
+                    </div>
+                    <p class="text-[7px] sm:text-[8px] md:text-[9px] text-gray-400 text-center leading-tight max-w-[90%] sm:max-w-[85%] px-2 drop-shadow-md font-medium">
+                        *O prazo começa a contar a partir da entrada do veículo na Car Shield, assinatura do contrato e autorização do Exército.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-black py-4 sm:py-6 px-4 sm:px-6 md:px-8 flex flex-col items-center relative z-0">
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
+                    <a href="https://api.whatsapp.com/send?phone=551126921471&text=Ol%C3%A1%2C%20achei%20sua%20empresa%20no%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" class="w-full bg-white text-black text-center py-3 sm:py-4 text-xs sm:text-sm md:text-base font-black transition-colors hover:bg-gold hover:text-black popup-action font-oswald uppercase tracking-widest italic skew-x-[-5deg] border border-transparent">
+                        <span class="inline-block skew-x-[5deg]">Quero blindar agora</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/lp-conversao.js"></script>
+</body>
+</html>
